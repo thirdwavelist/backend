@@ -32,6 +32,8 @@ jobs:
         with:
           name: lib
           path: lib
+      - name: Install Dependencies
+        run: npm ci
       - name: Deploy to Firebase functions
         uses: w9jds/firebase-action@master
         with:
