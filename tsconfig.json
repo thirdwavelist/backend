@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "es6",
+      "esnext.asynciterable"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "declaration": true,
+    "strict": true,
+    "target": "es2017",
+    "removeComments": true,
+    "esModuleInterop": true
+  },
+  "compileOnSave": true,
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib"
+  ],
+}
