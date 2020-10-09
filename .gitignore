@@ -1,0 +1,15 @@
+# package directories
+lib
+node_modules
+
+jspm_packages
+
+# Serverless directories
+.serverless
+
+## Compiled JavaScript files
+**/*.js
+**/*.js.mapfirebase-debug.log
+
+# Firebase
+.firebase-debug.log
