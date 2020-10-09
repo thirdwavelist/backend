@@ -1,9 +1,5 @@
 {
   "functions": {
-    "predeploy": [
-      "npm run lint",
-      "npm run build"
-    ],
     "source": ""
   }
 }
