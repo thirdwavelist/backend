@@ -1,7 +1,12 @@
+import {makeExecutableSchema} from 'graphql-tools';
 import { gql } from "apollo-server-express";
+import { Query } from './resolvers/Query';
+import ISODate from './scalars/ISODate';
 
-export default gql`
-type Query {
+const typeDefs = gql`
+  scalar ISODate
+
+  type Query {
     cafes: [Cafe]
     roasters: [Roaster]
   }
@@ -33,6 +38,8 @@ type Query {
     instagramPlaceId: String!
     lat: String!
     lng: String!
+    created: ISODate!
+    lastUpdated: ISODate!
   }
   
   type Roaster {
@@ -42,5 +49,8 @@ type Query {
     instagramId: String
     googlePlaceId: String
   }
-  
 `;
+
+const resolvers = { Query, ISODate };
+
+export default makeExecutableSchema( { typeDefs, resolvers } );
