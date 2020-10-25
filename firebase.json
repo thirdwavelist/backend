@@ -1,5 +1,14 @@
 {
   "functions": {
     "source": ""
+  },
+  "emulators": {
+    "ui": {
+      "enabled": true,
+      "port": 4000
+    },
+    "database": {
+      "port": 4002
+    }
   }
 }

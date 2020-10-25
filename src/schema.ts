@@ -7,8 +7,10 @@ const typeDefs = gql`
   scalar ISODate
 
   type Query {
-    cafes: [Cafe]
-    roasters: [Roaster]
+    cafes(limit: Int): [Cafe!]!
+    cafe(id: ID): Cafe
+    roasters: [Roaster!]!
+    roaster(id: ID): Roaster
   }
   
   type Cafe {
