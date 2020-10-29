@@ -36,9 +36,9 @@ export const Query = {
             .once("value")
             .then((snap: { val: () => any; }) => snap.val())
             .then((val: { [x: string]: any; }) => Object.keys(val).map(key => {
-                const cafe = val[key];
-                cafe["id"] = key;
-                return cafe;
+                const roaster = val[key];
+                roaster["id"] = key;
+                return roaster;
             }));
     }
     ,
@@ -48,7 +48,11 @@ export const Query = {
         .child(args.id)
         .once("value")
         .then((snap: { val: () => any; }) => snap.val())
-        .then((val: { [x: string]: any; }) => val)
+        .then((val: { [x: string]: any; }) => {
+            const cafe = val;
+            cafe["id"] = args.id;
+            return cafe;
+        })
     ,
     roaster: async (_: null, args: { id: string }) => admin
         .database()
@@ -56,5 +60,9 @@ export const Query = {
         .orderByChild(args.id)
         .limitToLast(1)
         .once("value")
-        .then((val: { [x: string]: any; }) => val)
+        .then((val: { [x: string]: any; }) => {
+            const roaster = val;
+            roaster["id"] = args.id;
+            return roaster;
+        })
 }
