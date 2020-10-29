@@ -35,7 +35,11 @@ export const Query = {
         return ref
             .once("value")
             .then((snap: { val: () => any; }) => snap.val())
-            .then((val: { [x: string]: any; }) => Object.keys(val).map(key => val[key]));
+            .then((val: { [x: string]: any; }) => Object.keys(val).map(key => {
+                const cafe = val[key];
+                cafe["id"] = key;
+                return cafe;
+            }));
     }
     ,
     cafe: async (_: null, args: { id: string }) => admin
