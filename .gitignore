@@ -12,6 +12,8 @@ jspm_packages
 **/*.js.map
 
 # Firebase
-.firebase-debug.log
+firebase-debug.log
+database-debug.log
+ui-debug.log
 
 # Other
