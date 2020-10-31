@@ -10,5 +10,12 @@
     "database": {
       "port": 4002
     }
+  },
+  "hosting": {
+    "public": "public",
+
+    "rewrites": [{
+      "source": "/api/**", "function": "graphql"
+    }]
   }
 }
