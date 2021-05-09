@@ -1,4 +1,4 @@
-import {makeExecutableSchema} from 'graphql-tools';
+import { makeExecutableSchema } from 'graphql-tools';
 import { gql } from "apollo-server-express";
 import { Query } from './resolvers/Query';
 import ISODate from './scalars/ISODate';
