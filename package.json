@@ -19,7 +19,7 @@
     "firebase-functions": "^3.14.1",
     "graphql": "^15.5.1",
     "graphql-scalars": "^1.10.0",
-    "graphql-tools": "^7.0.5"
+    "graphql-tools": "^8.0.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.3",
